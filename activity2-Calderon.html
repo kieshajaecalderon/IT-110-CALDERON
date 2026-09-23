@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+        <title>
+            ACTIVITY 2: HTML Practical Application
+        </title>
+
+        <style>
+            body {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                background-color: rgb(255, 197, 230);
+                margin: 20px;
+                color: black;
+                text-align: center;
+            }
+
+            h1 {
+                background-color: white;
+                padding: 15px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+
+            h2 {
+                padding: 10px;
+                border-radius: 6px;
+                color: black;
+            }
+
+            h3 {
+                margin-top: 20px;
+                color: black;
+            }
+
+            section {
+                background-color: white;
+                padding: 20px;
+                border-radius: 10px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                line-height: 1.6;
+            }
+
+            img {
+                width: 300px;
+                max-width: 90%;
+                margin: 10px;
+                border-radius: 8px;
+            }
+
+            figure {
+                display: inline-block;
+                padding: 10px;
+                border-radius: 8px;
+                margin: 10px;
+            }
+
+            figcaption {
+                color: black;
+                font-style: italic;
+                font-size: smaller;
+                margin-top: 5px;
+            }
+
+            a {
+                color: #d63384;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+
+            abbr {
+                color: #d63384;
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: bold;
+            }
+
+            abbr:hover {
+                background-color: azure;
+                padding: 2px 4px;
+                border-radius: 4px;
+            }
+
+            abbr:hover::after {
+                content: "HyperText Markup Language";
+                position: absolute;
+                color: white;
+                background-color: black;
+                font-size: 14px;
+                white-space: nowrap;
+            }
+
+            audio,
+            video {
+                max-width: 90%;
+                margin: 10px;
+                border-radius: 8px;
+            }
+
+            footer {
+                background-color: white;
+                padding: 10px;
+                border-radius: 8px;
+                margin-top: 20px;
+            }
+        </style>
+
+</head>
+
+<body>
+
+    <h1 id="main-heading">HTML Practical Application</h1>
+
+<section id="images-section">
+
+    <h2>IMAGES Section</h2>
+
+    <figure>
+
+        <img
+            src="html act 2/imgs/img 1.jpg"
+            alt="Me at Hojico"
+        >
+    
+        <figcaption>
+            Figure 1: This is me nga ga laag2 sa CBR kay para sa Hojico.
+        </figcaption>
+
+    </figure>
+
+    <figure>
+
+        <img
+            src="html act 2/imgs/img 2.jpg"
+            alt="ITE 16 Defense for the Final Project"
+        >
+
+        <figcaption>
+            Figure 2: This is Us during our ITE 16 Defense for the Final Project.
+        </figcaption>
+
+    </figure>
+
+    <figure>
+
+        <img
+            src="html act 2/imgs/img 3.jpg"
+            alt="SM Cinema: Insidious Midnight Showing"
+            >
+
+        <figcaption>
+            Figure 3: Alas Dose ga watch ug Insidious, so skeriiiii.
+        </figcaption>
+
+    </figure>
+
+</section>
+
+<section id="hyperlinks-section">
+
+    <h2>HYPERLINKS Section</h2>
+
+    <p>
+
+    <div>
+
+        <a href="act1-Calderon.html">
+            Internal Link: Open IT 110: HTML Activity 1
+        </a>
+        
+    </div>
+
+    </p>
+
+    <p>
+
+    <div>
+
+        <a href="https://www.facebook.com/bby.kjae"
+            target="_blank"
+        >
+            External Link: Visit My FB Acc MWEHEHEHE
+        </a>
+
+    </div>
+
+    </p>
+
+    <p>
+
+    <div>
+
+        <a href="mailto:kieshajae.calderon@carsu.edu.ph">
+            Email Link: Send Me an Email
+        </a>
+
+    </div>
+
+    </p>
+
+    <p>
+
+    <div>
+
+        <a href="#images-section">
+            Same-Page Anchor: Go to HTML Images Section
+        </a>
+
+    </div>
+
+    </p>
+
+</section>
+
+<section id="multimedia-section">
+
+    <h2>MULTIMEDIA Section</h2>
+
+    <h3>Audio</h3>
+
+    <audio controls>
+
+        <source
+            src="html act 2/media/audio 1.mp3"
+            type="audio/mpeg"
+        >
+
+        Imong browser kay dili daw mo support sa udyo elemento.
+
+    </audio>
+
+    <h3>Video</h3>
+
+    <video controls width="250">
+
+        <source
+            src="html act 2/media/vid 1.mp4"
+            type="video/mp4"
+        >
+
+        Imong browser kay dili daw mo support sa bidyo elemento.
+
+    </video>
+
+</section>
+
+<section id="useful tags-section">
+
+    <h2>USEFUL TAGS Section</h2>
+
+    <div>
+
+        <!---   The strong tag emphasizes important texts.   --->
+        <p>
+            <span>
+                <strong>
+                    Name:
+                </strong> Kiesha Jae T. Calderon
+            </span>
+            <p><strong>Course & Section:</strong> IT 110 - GWLM1</p>
+        </p>
+
+    </div>
+
+    <div>
+
+        <!---   The mark tag.   --->
+        <p>
+            IT 110 Activity 2: <abbr tittle="HyperText Markup Language">HTML</abbr> Application
+        </p>
+
+    </div>
+
+    <div>
+
+        <!---   The time tag represents a specific data or time.    --->
+        <p>
+            This activity was created in <time datetime="2026-09-23">September 9, 2026</time>
+        </p>
+
+    </div>
+
+</section>
+
+<section id="html dom-section">
+
+    <h2>HTML DOM Section</h2>
+
+    <p id="DOM Description">
+
+        The HTML Document Object Model (DOM) represents as HTML Document as a tree of elements.
+
+    </p>
+
+    <!---
+        The multimedia section element is the parent of the h2 and div elements.
+        The div element is the parent of the p element.
+        The p element is the parent of the span element.
+        The span element is the parent of the strong element that contains the text "Name:".
+    --->
+
+</section>
+
+</body>
+
+</html>
