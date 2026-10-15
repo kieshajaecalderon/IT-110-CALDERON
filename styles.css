@@ -1,0 +1,269 @@
+
+/* Reset ug base styles sa tibuok page. */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* First body rule: gi-set nako ang color daan. */
+
+body {
+color: rgb(150, 120, 135);
+}
+
+/* Cascade demonstration: ang second na body rule
+    wins sa color property kay ang duha ka selectors
+    kay same or equal ug specificity, maong kani nga 
+    declaration kay mo appear as later sa stylesheet. */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #5C4050;
+    background-color: #FFF0F5;
+    background-image: linear-gradient(135deg, #FFF0F5, #FFF8FB);
+}
+
+/* Header ni dapit. */
+
+header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #FADCE7;
+    border-bottom: 2px solid #F8DCE7;
+}
+
+h1,
+h2 {
+    color: #5C4050;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+/* Design2 before sa card heading para nice tan awon hehehehe. */
+
+.card h2::before {
+    content: "♡ ";
+    color: #D98BA7;
+    font-size: 1.1em;
+}
+
+
+/* Navigation ni diria na part. */
+
+nav {
+    margin-top: 1rem;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0.5rem 1.2rem;
+    margin: 0.25rem;
+    color: #5C4050;
+    background-color: #FFF8FB;
+    border: 1px solid #F8DCE7;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+nav a:hover {
+    color: white;
+    background-color: #D98BA7;
+    transform: translateY(-2px);
+}
+
+nav a:focus-visible {
+    outline: 2px solid #5C4050;
+    outline-offset: 3px;
+}
+
+
+/* Main Content ug Card. */
+
+main {
+    padding: 2rem 0;
+}
+
+.card {
+    width: 500px;
+    max-width: calc(100% - 32px);
+    padding: 24px;
+    margin: 0 auto 24px;
+    border: 2px solid #F8DCE7;
+    border-radius: 24px;
+    background-color: #FFF8FB;
+    box-shadow: 0 8px 24px rgba(217, 139, 167, 0.18);
+    overflow-wrap: anywhere;
+}
+
+/* Paragraphs sulod sa cards. */
+
+.card p {
+    margin-bottom: 1rem;
+    color: #775C6A;
+    font-size: 0.95rem;
+}
+
+/* Introductory paragraph: gi-highlight ang introduction. */
+
+.intro {
+    padding: 1rem;
+    color: #5C4050;
+    background-color: #FFF0F5;
+    border-left: 4px solid #F4A7C3;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+/* Box-Model Calculation:
+    Total nga na render width = 500px with border-box.
+    Ang Content = 500px - 48px padding - 4px borders = 448px.
+    Ang Total = 448px content + 48px padding + 4px borders = 500px.
+*/
+
+/* About Me ug ang Hobby  */
+
+#about {
+    position: relative;
+    border-color: #F4A7C3;
+}
+
+/* Badge sa upper-right corner sa About Me card. */
+
+#about::after {
+    content: "My Profile";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    padding: 3px 8px;
+    color: #5C4050;
+    background-color: #FADCE7;
+    border-radius: 12px;
+    font-size: 0.6rem;
+    font-weight: 700;
+}
+
+#about > li {
+    display: inline-block;
+    list-style: none;
+    padding: 0.45rem 0.85rem;
+    margin: 0.25rem;
+    color: #5C4050;
+    background-color: #FADCE7;
+    border: 1px solid #F4A7C3;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+/* Skills ni dapit */
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.skills-list > li {
+    list-style: none;
+    padding: 0.45rem 0.85rem;
+    color: #5C4050;
+    background-color: #FADCE7;
+    border: 1px solid #F4A7C3;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+
+/* Diri ang display, ang visibility, ug ang scroll2. */
+
+/* I-hide ang element ug ihawa pati ang iyang space. */
+
+.hide-none {
+    display: none;
+}
+
+/* I-hide pero makita or naa gihapoy space niya. */
+
+.hide-visibility {
+    visibility: hidden;
+}
+
+/* Gi fixed-height ang scrolling para sa overflowing nga content. */
+
+.scroll-box {
+    height: 120px;
+    overflow: auto;
+    scrollbar-color: #F4A7C3 #FFF0F5;
+    scrollbar-width: thin;
+}
+
+
+/* Footer. */
+
+footer {
+    padding: 1.5rem 1rem;
+    text-align: center;
+    background-color: #FADCE7;
+    border-top: 1px solid #F8DCE7;
+}
+
+footer p {
+    color: #5C4050;
+    font-size: 0.85rem;
+}
+
+/* Reflection Questions: /*
+
+1. Why did one of your two conflicting rules win?
+
+Maong nadaog ang 2nd body rule dapit sa color property tungod kay
+ang duha ka selectors kay equal or same ug specificity. Maong tung na
+declare ang duha kabuok nga same or equal ug specificity, then mo
+result sya nga ang later nga declaration ang mo precedence sa stylesheet.
+
+
+2. What is the rendered width if box-sizing were content-box?
+
+Ang calculation kay:
+Content width + left and right padding + left and right borders
+500px + 24px + 24px + 2px + 2px = 552px.
+
+Pag content-box, ang i-declare kay 500px, which is ma apply ra sya 
+only sa content.
+Tapos pag border-box, kay ang ma declare pud sa width kay ma apil 
+na ang content, padding, ug border, so mao ang total rendered width 
+is 500px
+
+
+3. When would you choose visibility: hidden instead of
+display: none?
+
+Akoa gamiton ang "visibility: hidden" pag gusto nako i-hide ang
+element unya i-preserve ang space sa layout. Unya akoa sad gamiton 
+ang "display: none" pag gusto nako nga i-hide ang element ug i-hawa 
+ang layout space.
+
+*/
